@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href='<%=player.image%>'>
+    <title><%=player.name%></title>
+</head>
+<body class="full-background" background="https://images5.alphacoders.com/467/thumb-1920-467394.jpg">
+    <!-- NavBar Partial -->
+    <%- include('./partials/nav.ejs') %>
+    <div class="flex flex-row justify-center mx-20 my-20">
+        <div class="flex justify-center mx-8" style="width: 45em; height: 40em;">
+            <div class="mx-8 flex flex-col items-center rounded shadow-lg bg-white max-w-sm w-5th" style="width: 40em; height: 40m;">
+                <img class=" my-2 rounded-t-lg" src="<%=player.image%>" alt="" style="width: 20em; height: 22m;"/>
+              <div class="my-3">
+                <h5 class="mx-2 text-gray-900 text-xl font-medium mb-2 my-1"><strong><%=player.name%></strong></h5>
+                <p class="mx-2 text-gray-900 text-xl font-medium mb-2 my-1"><strong>Year formed: <%=player.formation%></strong></p>
+                <p class="mx-2 text-gray-900 text-xl font-medium mb-2 my-1"><strong>Championships: <%=player.championships%></strong></p>
+                <p class="mx-2 text-gray-900 text-xl font-medium mb-2 my-1"><strong>Stadium: <%=player.stadium%></strong></p>               
+              </div>
+              <div class="update-buttons flex flex-row  w-50">
+                <button class="mx-3 bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <form class='mx-3'action="/edit/<%=player._id%>" method="get">
+                <input class="" type="submit" name="submit" value="Edit Team">
+                </form>
+                </button>
+                <button class="mx-3 bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <form class=''action="/delete/<%=player._id%>?_method=DELETE" method="post">
+                <input type="submit" name="delete" value="Delete Team">
+                </form>
+                </button>
+                </div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+          <iframe class="mx-21" width="600" height="400" src="<%=player.highlights%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <img class="mx-21 my-5 rounded-t-lg" src="<%=player.image%>" alt="" style="width: 20em; height: 22m;"/>
+          </div>           
+       </div>
+          </div>
+    </div>
+    
+</body>
+</html>

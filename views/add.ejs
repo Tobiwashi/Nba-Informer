@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="./styles/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href='/images/favicon.ico'>
+    <title>NBA TEAMS</title>
+</head>
+<body class='bg-danger'>
+    <!-- NavBar Partial -->
+    <%- include('./partials/nav.ejs')%>   
+    <!--Main Page-->
+    <main  id='product-page' class="form-signin w-100 m-auto">
+
+        <form action='/add' method='post' class="w-25 my-5 mx-auto d-flex flex-column align-items-center">
+          <img class="mb-4 mx-3 " src="https://www.edigitalagency.com.au/wp-content/uploads/NBA-logo-png.png" alt="" width="150" height="150">
+          <h1 class="h3 mb-3 fw-normal">Add a Team</h1>
+          <div class="form-floating my-1 w-75 p-form">
+            <input name="name" type="text" class="form-control" id="nameInput" placeholder="Team Name">
+            <label for="nameInput">Name:</label>
+          </div>
+
+          <div class="form-floating my-1 w-75 p-form">
+            <input name='formation' type="number" class="form-control" id="formationInput" placeholder="Formation Date">
+            <label for="formationInput">Team Formation Date:</label>
+          </div>
+
+          <div class="form-floating my-1 w-75 p-form">
+            <input name='image'type="text" class="form-control" id="ImageInput" placeholder="Image URL">
+            <label for="thumbnailInput">Image:</label>
+          </div>
+          <div class="form-floating my-1 w-75 p-form">
+            <input name='highlights'type="text" class="form-control" id="trailerInput" placeholder="Highlights URL">
+            <label for="trailerInput">Highlights URL:</label>
+          </div>
+          <div class="form-floating my-1 w-75 p-form">
+            <input name='stadium'type="text" class="form-control" id="stadiumInput" placeholder="Stadium Name">
+            <label for="stadiumInput">Stadium Name:</label>
+          </div>
+          <input class="my-3 w-75 btn btn-lg btn-light" type="submit" value="Add Team">
+        </form>
+      </main>
+</body>
+</html>

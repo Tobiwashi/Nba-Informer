@@ -69,6 +69,6 @@ app.delete('/delete/:id' ,(req,res) =>{
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 
 // // Collection Creation//
-// teamSchema.create(allPlayers, (err, items)=> {
-//     console.log(items)
-// })  
+teamSchema.create(allPlayers, (err, items)=> {
+    console.log(items)
+})

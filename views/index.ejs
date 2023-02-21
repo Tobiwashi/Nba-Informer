@@ -13,7 +13,7 @@
     <%- include('./partials/nav.ejs') %>
     <div class="flex flex-row flex-wrap justify-start mx-8 my-8">
     <% for(let player of allPlayers){ %>
-      <div class="flex flex-col items-center mx-3 my-3 max-w-sm bg-white rounded overflow-hidden shadow-lg" style="width: 30em; height: 30em;">
+      <div class="flex flex-col items-center mx-8 my-3 max-w-sm bg-white rounded overflow-hidden shadow-lg" style="width: 27em; height: 30em;">
         <img class="my-3 " src="<%=player.image%>" alt="Sunset in the mountains" style="width: 14em; height: 14em;">
         <div class="px-6 py-4">
           <h5 class="mx-2 text-gray-900 text-xl font-medium mb-2 my-1"><strong>Team: <%=player.name%></strong></h5>

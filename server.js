@@ -21,7 +21,7 @@ db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('Mongo Connection Established: ', MONGODB_URI));
 db.on('disconnected', () => console.log('Mongo Connection Terminated'));
 
-
+const path = require('path');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'express');
 app.use(express.static(path.join(__dirname, 'public')))
